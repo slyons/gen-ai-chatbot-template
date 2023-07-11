@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "1618",
+    "fabricId" : "2930",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -39,10 +39,10 @@
       "id" : "KfvmV",
       "name" : "Prophecy Spark AI (Python)",
       "enabled" : true,
-      "package" : "prophecy-spark-ai==0.1.6"
+      "package" : "prophecy-spark-ai==0.1.7"
     }, {
       "type" : "coordinates",
-      "coordinates" : "io.prophecy:spark-ai_2.12:0.1.6",
+      "coordinates" : "io.prophecy:spark-ai_2.12:0.1.7",
       "name" : "Prophecy Spark AI",
       "enabled" : true,
       "id" : "xs0D8",
@@ -67,12 +67,6 @@
     "target" : "3u5ae5Hd2G3jtDNo3ixul$$Tbv3XnEyY9dIrxwVw1avt",
     "targetPort" : "CFLd78WnSN61UDtHRsKp7$$M2DN6SgRCpFW400lBRWYm"
   }, {
-    "id" : "RtA1r4vTvsoqHrLaGZK3s",
-    "source" : "Mtip3jhyXDNbqxet97Llq$$7H-OL23RMVCDiGDRfdEO5",
-    "sourcePort" : "qviaDTs-5iCqfiGZopf-p$$zklgh-5s_omvS06hDGB9J",
-    "target" : "nEbNW_lLgkYCVc8hqfdwN$$25hjza2ov7UcKRCz1MloA",
-    "targetPort" : "SS4YeFJ-UYz-W5_ji_O_L$$gYOe9ptiAMOzkpIn-ejRV"
-  }, {
     "id" : "zB1LoY5S2Qt5dF8rMD3-M",
     "source" : "8T5rDEgGsyVmI9WPbQM7y$$9Xwym8XoDv3xVomNVjpkM",
     "sourcePort" : "-MI6avNXNWLKgiO_9CkJS$$mbqBhsGlgpZAb0rFK3tfk",
@@ -90,8 +84,40 @@
     "sourcePort" : "V3mZhRWwMBNDrqEvQyHSi$$NqqXIcttpcrUhGr9ytWzt",
     "target" : "0FNx8lliiaB3vDvlX5Owb$$b3rW0TvtGqV0yC-Cs7_zA",
     "targetPort" : "eiR3MvyKSzKiZbH_YyHsk$$7ID2ovwLy1MWi-Zmuk7yK"
+  }, {
+    "id" : "dw_-pQFdeUESKAFuy4Qe3$$rdmUhpMgwgdhpo3pM3ZZW",
+    "source" : "uzlyVrg0IExGY_m6nV5if$$2OMLZipGpjjYPu9fPaXR_",
+    "sourcePort" : "EKO4xQaViYf1f7GaWSL8S$$B6VP_u6r4Td4OgQZfueZo",
+    "target" : "nEbNW_lLgkYCVc8hqfdwN$$25hjza2ov7UcKRCz1MloA",
+    "targetPort" : "SS4YeFJ-UYz-W5_ji_O_L$$gYOe9ptiAMOzkpIn-ejRV"
   } ],
   "processes" : {
+    "uzlyVrg0IExGY_m6nV5if$$2OMLZipGpjjYPu9fPaXR_" : {
+      "id" : "uzlyVrg0IExGY_m6nV5if$$2OMLZipGpjjYPu9fPaXR_",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "web_bronze_url2",
+        "slug" : "web_bronze_url2",
+        "x" : 0,
+        "y" : 80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "EKO4xQaViYf1f7GaWSL8S$$B6VP_u6r4Td4OgQZfueZo",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/web_bronze_url2"
+      }
+    },
     "nEbNW_lLgkYCVc8hqfdwN$$25hjza2ov7UcKRCz1MloA" : {
       "id" : "nEbNW_lLgkYCVc8hqfdwN$$25hjza2ov7UcKRCz1MloA",
       "component" : "Reformat",
@@ -162,32 +188,6 @@
         "importString" : "",
         "activeTab" : "expressions",
         "columnsSelector" : [ "SS4YeFJ-UYz-W5_ji_O_L$$gYOe9ptiAMOzkpIn-ejRV##content" ]
-      }
-    },
-    "Mtip3jhyXDNbqxet97Llq$$7H-OL23RMVCDiGDRfdEO5" : {
-      "id" : "Mtip3jhyXDNbqxet97Llq$$7H-OL23RMVCDiGDRfdEO5",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "index_web_read",
-        "slug" : "index_web_read",
-        "x" : 0,
-        "y" : 80,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "qviaDTs-5iCqfiGZopf-p$$zklgh-5s_omvS06hDGB9J",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/web_bronze_url"
       }
     },
     "3u5ae5Hd2G3jtDNo3ixul$$Tbv3XnEyY9dIrxwVw1avt" : {

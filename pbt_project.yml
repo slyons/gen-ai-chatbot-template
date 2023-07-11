@@ -70,7 +70,7 @@ pipelines:
     datasets:
       inputs:
       - datasets/web_bronze_sitemap
-      - datasets/web_bronze_url
+      - datasets/web_bronze_url2
       outputs:
       - datasets/web_bronze_content
       - datasets/web_bronze_sitemap_raw
@@ -194,6 +194,19 @@ datasets:
         description: ''
         author: maciej@prophecy.io
         createdAt: '2023-06-20 04:50:58'
+  datasets/web_bronze_url2:
+    name: web_bronze_url2
+    description: ''
+    author: scott+dais@prophecy.io
+    createdAt: '2023-06-27 18:54:06'
+    mode: batch
+    physicalDatasets:
+      prophdev:
+        fabricId: 2930
+        datasetType: WebApp
+        description: ''
+        author: scott+dais@prophecy.io
+        createdAt: '2023-06-27 18:54:06'
 templates: {}
 jobs: {}
 functions:
@@ -207,7 +220,7 @@ functions:
       tags: []
       inputs: []
       outputs: []
-      author: maciej@prophecy.io
+      author: scott+dais@prophecy.io
       createdAt: '2022-12-15 18:04:50'
   udafs: {}
   expressions: {}
@@ -223,9 +236,9 @@ dependencies:
   id: KfvmV
   name: Prophecy Spark AI (Python)
   enabled: false
-  package: prophecy-spark-ai==0.1.6
+  package: prophecy-spark-ai==0.1.7
 - type: coordinates
-  coordinates: io.prophecy:spark-ai_2.12:0.1.6
+  coordinates: io.prophecy:spark-ai_2.12:0.1.7
   name: Prophecy Spark AI
   enabled: false
   id: xs0D8

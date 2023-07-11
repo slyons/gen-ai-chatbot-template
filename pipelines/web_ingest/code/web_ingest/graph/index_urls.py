@@ -1,9 +1,8 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.utils import *
 from prophecy.libs import typed_lit
-from prophecy.transpiler import call_spark_fcn
-from prophecy.transpiler.fixed_file_schema import *
 from web_ingest.config.ConfigStore import *
 from web_ingest.udfs.UDFs import *
 
@@ -16,4 +15,4 @@ def index_urls(spark: SparkSession) -> DataFrame:
             StructField("changefreq", StringType(), True), StructField("loc", StringType(), True), StructField("priority", DoubleType(), True)
         ])
         )\
-        .load("dbfs:/prophecy_data/web/bronze/sitemap/")
+        .load("dbfs:/prophecy_data/web/bronze/sitemap_scottaidemo/")

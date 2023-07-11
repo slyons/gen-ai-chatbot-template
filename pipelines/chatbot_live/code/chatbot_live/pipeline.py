@@ -1,11 +1,10 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.utils import *
 from chatbot_live.config.ConfigStore import *
 from chatbot_live.udfs.UDFs import *
 from prophecy.utils import *
-from prophecy.transpiler import call_spark_fcn
-from prophecy.transpiler.fixed_file_schema import *
 from chatbot_live.graph import *
 
 def pipeline(spark: SparkSession) -> None:
@@ -21,8 +20,10 @@ def pipeline(spark: SparkSession) -> None:
     df_with_watermark = with_watermark(spark, df_with_original_content)
     df_collect_results = collect_results(spark, df_with_watermark)
     df_answer_question = answer_question(spark, df_collect_results)
+    df_MoodEnhancer = MoodEnhancer(spark, df_collect_results)
     df_prepare_payload = prepare_payload(spark, df_answer_question)
     bot_messages_target(spark, df_prepare_payload)
+    df_SchemaTransform_1 = SchemaTransform_1(spark, df_prepare_payload)
 
 def main():
     spark = SparkSession.builder\

@@ -6,7 +6,8 @@ from prophecy.libs import typed_lit
 from chatbot_live.config.ConfigStore import *
 from chatbot_live.udfs.UDFs import *
 
-def only_user_msgs(spark: SparkSession, Script_1: DataFrame) -> DataFrame:
-    return Script_1.filter(
-        (col("value_parsed").isNotNull() & (col("value_parsed.payload.event.user") != lit("U05E29HNU95")))
+def SchemaTransform_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.withColumn(
+        "answer",
+        ((lit("Is \"") + col("answer")) + lit("\" a positive sentence or a negative sentence?"))
     )

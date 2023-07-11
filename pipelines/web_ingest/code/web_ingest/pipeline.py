@@ -1,16 +1,15 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.utils import *
 from web_ingest.config.ConfigStore import *
 from web_ingest.udfs.UDFs import *
 from prophecy.utils import *
-from prophecy.transpiler import call_spark_fcn
-from prophecy.transpiler.fixed_file_schema import *
 from web_ingest.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_index_web_read = index_web_read(spark)
-    df_text_only = text_only(spark, df_index_web_read)
+    df_web_bronze_url2 = web_bronze_url2(spark)
+    df_text_only = text_only(spark, df_web_bronze_url2)
     index_web_text(spark, df_text_only)
     df_index_urls = index_urls(spark)
     df_scrape_pages = scrape_pages(spark, df_index_urls)

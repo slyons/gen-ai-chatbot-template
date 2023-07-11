@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "1777",
+    "fabricId" : "2930",
     "frontEndLanguage" : "sql",
     "mode" : "stream",
     "udfs" : {
@@ -39,10 +39,10 @@
       "id" : "KfvmV",
       "name" : "Prophecy Spark AI (Python)",
       "enabled" : true,
-      "package" : "prophecy-spark-ai==0.1.6"
+      "package" : "prophecy-spark-ai==0.1.7"
     }, {
       "type" : "coordinates",
-      "coordinates" : "io.prophecy:spark-ai_2.12:0.1.6",
+      "coordinates" : "io.prophecy:spark-ai_2.12:0.1.7",
       "name" : "Prophecy Spark AI",
       "enabled" : true,
       "id" : "xs0D8",
@@ -138,6 +138,18 @@
     "sourcePort" : "hqovZ3j0trvo9OFcj9mnN$$Td0D3qTsJetGBqWutVpNa",
     "target" : "_y7faDtxMrc3y8t8AW0JV$$apvu7vsX79HTfzj6Tj80M",
     "targetPort" : "U9zEwBtOY6a6Vi5u5h1fx$$Ea2M8gZBvAw1E6ej6rvxW"
+  }, {
+    "id" : "ISPz1X2vuWGEUQCCrJA_b",
+    "source" : "5Pgv2A3o_6iUQal7saI2H$$cnP11EKk6gtglGRiWgOJl",
+    "sourcePort" : "hqovZ3j0trvo9OFcj9mnN$$Td0D3qTsJetGBqWutVpNa",
+    "target" : "J4g13ozqg7t4dOMAeg2M4$$A-ic2PUp-tGhoMhZTIUXG",
+    "targetPort" : "zckaYLwb2Ht0fq-k6mdcv$$hvy-Njx5GiBWe_97qPYb3"
+  }, {
+    "id" : "SmNkyVXM7W_EltBHPmHlq",
+    "source" : "88e_EXHRi17eo8tWJoiYE$$HmNDOuRE-ylMRGfxUfzuP",
+    "sourcePort" : "bix85fS7P1x9esMmxKfW6$$hctBaSoeZh1B3zGephCVA",
+    "target" : "K89b4920xsL4sQ7ympVn2$$lG8NjOGsuRafRR8yp1EF1",
+    "targetPort" : "-s5njaXBt4FbSmdXNy0f4$$JTrHqk-pJh5UdEPMqeQmm"
   } ],
   "processes" : {
     "_y7faDtxMrc3y8t8AW0JV$$apvu7vsX79HTfzj6Tj80M" : {
@@ -376,12 +388,12 @@
         "qa_query_column_name" : "input",
         "credential_type" : "databricks",
         "order_by_column" : null,
-        "credential_db_scope" : "open_ai",
+        "credential_db_scope" : "scottai-demo",
         "credential_manual_token" : "",
         "operation" : "answer_question",
         "embed_text_column_name" : null,
         "qa_context_column_name" : "content_chunk",
-        "credential_db_key" : "token",
+        "credential_db_key" : "openapi_token",
         "limit" : "10",
         "qa_template" : "Answer the question based on the context below. \n\nContext:\n```\n{context}\n```\n\nQuestion: \n```\n{query}\n```\n\nAnswer:\n",
         "group_data" : true
@@ -508,11 +520,118 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed.payload.event", "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed.payload", "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed.payload.event.user", "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed" ],
+        "columnsSelector" : [ "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed.payload", "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed.payload.event", "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed.payload.event.user", "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "value_parsed is not null and value_parsed.payload.event.user != 'U05AU1K4ELV'"
+          "expression" : "value_parsed is not null and value_parsed.payload.event.user != 'U05E29HNU95'"
         }
+      }
+    },
+    "J4g13ozqg7t4dOMAeg2M4$$A-ic2PUp-tGhoMhZTIUXG" : {
+      "id" : "J4g13ozqg7t4dOMAeg2M4$$A-ic2PUp-tGhoMhZTIUXG",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "MoodEnhancer",
+        "slug" : "MoodEnhancer",
+        "x" : 580,
+        "y" : -300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zckaYLwb2Ht0fq-k6mdcv$$hvy-Njx5GiBWe_97qPYb3",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "created_at",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "channel",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "60KMxPnRsYMFaFr4EFK8u$$AXU_TyZ8ERk8N8-ucQyoq",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "import random\nfrom pyspark.sql.functions import col\nmoods = [\n    \"in a grumpy way\", \n    \"in a bubbly way\", \n    \"in a quiet way\", \n    \"in a depressed way\",\n    \"in a distracted way\",\n    \"in a panicked way\",\n    \"in an annoyed tone\",\n    \"in an overly nice way\", \n    \"like you have a secret to share\"\n]\nrand_mood = random.choice(moods)\nmood_msg = f\"\\n\\nAnswer {rand_mood}.\"\n\nout0 = in0.withColumn(\"input\", col(\"input\") + lit(mood_msg))",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
       }
     },
     "88e_EXHRi17eo8tWJoiYE$$HmNDOuRE-ylMRGfxUfzuP" : {
@@ -859,7 +978,7 @@
       "metadata" : {
         "label" : "bot_messages_target",
         "slug" : "bot_messages_target",
-        "x" : 1020,
+        "x" : 1480,
         "y" : -40,
         "phase" : 0,
         "cache" : false,
@@ -1261,12 +1380,12 @@
         "qa_query_column_name" : null,
         "credential_type" : "databricks",
         "order_by_column" : "value_parsed.ts",
-        "credential_db_scope" : "open_ai",
+        "credential_db_scope" : "scottai-demo",
         "credential_manual_token" : "",
         "operation" : "embed_texts",
         "embed_text_column_name" : "text",
         "qa_context_column_name" : null,
-        "credential_db_key" : "token",
+        "credential_db_key" : "openapi_token",
         "limit" : "10",
         "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
         "group_data" : false
@@ -1762,11 +1881,11 @@
         "isCustomOutputSchema" : true
       },
       "properties" : {
-        "index_name" : "all-vectors",
+        "index_name" : "scotts-index",
         "credential_type" : "databricks",
-        "credential_db_scope" : "pinecone",
+        "credential_db_scope" : "scottai-demo",
         "environment" : "us-east-1-aws",
-        "credential_db_key" : "token",
+        "credential_db_key" : "pinecone_token",
         "vector_column_name" : "openai_embedding",
         "top_k" : 3,
         "credential_manual_api_key" : ""
@@ -1958,6 +2077,94 @@
           "description" : "",
           "_row_id" : null
         } ]
+      }
+    },
+    "K89b4920xsL4sQ7ympVn2$$lG8NjOGsuRafRR8yp1EF1" : {
+      "id" : "K89b4920xsL4sQ7ympVn2$$lG8NjOGsuRafRR8yp1EF1",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "SchemaTransform_1",
+        "slug" : "SchemaTransform_1",
+        "x" : 1120,
+        "y" : 180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-s5njaXBt4FbSmdXNy0f4$$JTrHqk-pJh5UdEPMqeQmm",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "channel",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "answer",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "r9XjJ84elyDBaEfGGGoST$$XQ_OFTD3HzcIABBM5sqSc",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "sql",
+        "importString" : "",
+        "transformations" : [ {
+          "MissingColumn" : {
+            "sourceColumn" : "",
+            "defaultValue" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "AddReplaceColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "answer",
+            "expression" : {
+              "format" : "sql",
+              "expression" : "lit(\"Is \\\"\") + answer + lit(\"\\\" a positive sentence or a negative sentence?\") "
+            }
+          }
+        } ],
+        "activeTab" : "transformations",
+        "columnsSelector" : [ "-s5njaXBt4FbSmdXNy0f4$$JTrHqk-pJh5UdEPMqeQmm##answer" ]
       }
     },
     "Ff-_7NUedOIH1fb0fe7B2$$nGIUG9rzJwMFIbBVrzD6k" : {
