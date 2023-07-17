@@ -80,3 +80,8 @@ You can check out the end result on the [video here](https://www.loom.com/share/
 
 
 
+
+
+*** Release notes for version: 0.0.1 ***
+
+SW Release 0.0.1
