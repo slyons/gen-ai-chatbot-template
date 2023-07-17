@@ -1,0 +1,187 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: id
+    type: long
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ns
+    type: long
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: redirect
+    type:
+      type: struct
+      fields:
+      - name: _VALUE
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: _title
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: revision
+    type:
+      type: struct
+      fields:
+      - name: comment
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: contributor
+        type:
+          type: struct
+          fields:
+          - name: id
+            type: long
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+          - name: ip
+            type: string
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+          - name: username
+            type: string
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: format
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: id
+        type: long
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: minor
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: model
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: origin
+        type: long
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: parentid
+        type: long
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: sha1
+        type: string
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: text
+        type:
+          type: struct
+          fields:
+          - name: _VALUE
+            type: string
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+          - name: _bytes
+            type: long
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+          - name: _sha1
+            type: string
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+          - name: _xml:space
+            type: string
+            nullable: true
+            metadata:
+              description: ''
+              mappings: []
+              tags: []
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+      - name: timestamp
+        type: timestamp
+        nullable: true
+        metadata:
+          description: ''
+          mappings: []
+          tags: []
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: title
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

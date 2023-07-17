@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "1777",
+    "fabricId" : "1571",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -47,6 +47,18 @@
       "enabled" : true,
       "id" : "xs0D8",
       "exclusions" : [ ]
+    }, {
+      "type" : "pypi",
+      "id" : "tO097",
+      "name" : "mwparserfromhell",
+      "enabled" : false,
+      "package" : "mwparserfromhell==0.6.4"
+    }, {
+      "type" : "pypi",
+      "id" : "80Z7r",
+      "name" : "wikitextparser",
+      "enabled" : false,
+      "package" : "wikitextparser==0.53.0"
     } ],
     "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,

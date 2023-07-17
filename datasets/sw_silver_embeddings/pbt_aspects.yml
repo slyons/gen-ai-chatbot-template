@@ -1,0 +1,42 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: doc_id
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: page_id
+    type: long
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: section_num
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: embedding
+    type:
+      type: array
+      elementType: float
+      containsNull: true
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: chunk_text
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

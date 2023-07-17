@@ -1,16 +1,16 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.utils import *
 from prophecy.libs import typed_lit
-from prophecy.transpiler import call_spark_fcn
-from prophecy.transpiler.fixed_file_schema import *
 from web_vectorize.config.ConfigStore import *
 from web_vectorize.udfs.UDFs import *
 
 def vectorize(spark: SparkSession, with_id: DataFrame) -> DataFrame:
     from spark_ai.llms.openai import OpenAiLLM
     from pyspark.dbutils import DBUtils
-    OpenAiLLM(api_key = DBUtils(spark).secrets.get(scope = "open_ai", key = "api_key")).register_udfs(spark = spark)
+    OpenAiLLM(api_key = DBUtils(spark).secrets.get(scope = "scottai-demo", key = "openai_token"))\
+        .register_udfs(spark = spark)
 
     return with_id\
         .withColumn("_row_num", row_number().over(Window.partitionBy().orderBy(col("id"))))\

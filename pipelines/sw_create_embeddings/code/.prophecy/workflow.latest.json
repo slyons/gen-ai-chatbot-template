@@ -1,0 +1,1365 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1571",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "maciej_prophecy.genaichatbottemplate.functions",
+      "sharedFunctionPackageNames" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "id" : "KfvmV",
+      "name" : "Prophecy Spark AI (Python)",
+      "enabled" : false,
+      "package" : "prophecy-spark-ai==0.1.7"
+    }, {
+      "type" : "coordinates",
+      "coordinates" : "io.prophecy:spark-ai_2.12:0.1.7",
+      "name" : "Prophecy Spark AI",
+      "enabled" : false,
+      "id" : "xs0D8",
+      "exclusions" : [ ]
+    }, {
+      "type" : "pypi",
+      "id" : "tO097",
+      "name" : "mwparserfromhell",
+      "enabled" : false,
+      "package" : "mwparserfromhell==0.6.4"
+    }, {
+      "type" : "pypi",
+      "id" : "80Z7r",
+      "name" : "wikitextparser",
+      "enabled" : false,
+      "package" : "wikitextparser==0.53.0"
+    } ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "sw_create_embeddings",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "9YrSXMhulL_RpwwgGiTfy",
+    "source" : "lzis-gFp2toGuwtGayi1D$$n4BMzvF-iC6GTz597R4OC",
+    "sourcePort" : "lua3mz41panJwk_nU7Q7e$$87ZWO9VseFboEuKpEvMrL",
+    "target" : "scnQQBLyW5R7-mX1ldaHy$$Awy3nJCIkSY26JJwt0eJB",
+    "targetPort" : "O5Wr5l8FKofWjmdnqIC7t$$aOc_3ZLO5CmuPZ-8kH07M"
+  }, {
+    "id" : "l3qbEKMdvPZE_x-3EGH63",
+    "source" : "scnQQBLyW5R7-mX1ldaHy$$Awy3nJCIkSY26JJwt0eJB",
+    "sourcePort" : "JCBTAYTIZEOvEqUQMV7rB$$aMNBSUZF9C7GdLbDyhrQL",
+    "target" : "iCZcUlQJtEarhkD9WZpng$$KzO414QXPI-qfeAvXg_Oz",
+    "targetPort" : "Klv6EUgsolWCAY_l0z5o2$$hsEZHunH30Q_QJ0vHVzgj"
+  }, {
+    "id" : "XM1ZFvYgsoBbLdtX_L4aQ",
+    "source" : "iCZcUlQJtEarhkD9WZpng$$KzO414QXPI-qfeAvXg_Oz",
+    "sourcePort" : "aWV4Q6mC_aOIuHGCMjadE$$msE3h51TjIhJJVZgxclKR",
+    "target" : "y4MgzBWSa7IMYTt11Eksp$$0ZS-Nd8GuNMbVXi3yRPY8",
+    "targetPort" : "hIS2lBVkikSeJSars-5L1$$BX5Qq5QsQ6fywnGBCOhtx"
+  }, {
+    "id" : "UQ9zfEZ7cruiN3dBKvFJN",
+    "source" : "GxPuPkK2ruoH3NS9H7uUt$$R4Omfp2rCwMfzP7lLnidk",
+    "sourcePort" : "Pp-g7d6sS0FluuDIdiloZ$$z2nyj7Jq7tBvMpVe-vP0a",
+    "target" : "FZd-Ia9zLEIKSpCvnLP_s$$xaGz1otnUY5OWJULu6ieU",
+    "targetPort" : "-hKRI-2xtKRY1_lu-5JrM$$VrlEYXCmBLYbg67bVY95x"
+  }, {
+    "id" : "LXdxJWLHx9XX4PRd5kVGz",
+    "source" : "FZd-Ia9zLEIKSpCvnLP_s$$xaGz1otnUY5OWJULu6ieU",
+    "sourcePort" : "DUphf8ESSPBZl-OPuNYae$$ZeLsKGVhVekL6YID9Rr3j",
+    "target" : "M-TzbR8wtCIWN-w6tiLmZ$$7dZlAIKPNUDOw-RXkDZog",
+    "targetPort" : "P2OXjiPOEh6M6ubh0rBbL$$KlE4mxKRYrJIFvE-SU3xZ"
+  }, {
+    "id" : "bdfK9l5CK1QPQ3Orllzs1",
+    "source" : "y4MgzBWSa7IMYTt11Eksp$$0ZS-Nd8GuNMbVXi3yRPY8",
+    "sourcePort" : "hiwuWViXRYhRDoRaIgSPw$$R_ZSziX6vqYzRPHBrGVBs",
+    "target" : "GxPuPkK2ruoH3NS9H7uUt$$R4Omfp2rCwMfzP7lLnidk",
+    "targetPort" : "5UmLecpWZyMvKz56sww7k$$256IqCvZZUeMvTWNoDWxG"
+  }, {
+    "id" : "9flCsprke_nl9SSV7aEFQ",
+    "source" : "M-TzbR8wtCIWN-w6tiLmZ$$7dZlAIKPNUDOw-RXkDZog",
+    "sourcePort" : "_OCQw7qXjljNdnWcpVH7Z$$Etsn5uxX3S3J2oHwWVp3j",
+    "target" : "EDzC1wfDZgeFIy1eDiJYA$$6eqwsoy19m3z9xm-uGXZh",
+    "targetPort" : "4ds5AxzGjuvc9vdXsJBz_$$inPOl7EHlKMAugnLR3WMj"
+  }, {
+    "id" : "UmCR9oC5flDE5GdOv7W49",
+    "source" : "sajUaeTJUtqdaMW6IYtQB$$xIevQRxUZbnPIWrcK_GtJ",
+    "sourcePort" : "HlpeRZw7cwak9T-2T0p72$$Kdr7LblYn0vKKpbqUt3-2",
+    "target" : "mWnVLacYps6aU47a06q4z$$aHqpSBv5K6gRZEnz_CWdt",
+    "targetPort" : "l6VFjNuxyiMr6AyrHy-YK$$CUmRcIekD3HZKTd540k6v"
+  }, {
+    "id" : "v9zoRiCvWxXeCDtIi1Rfr",
+    "source" : "p942N7pXY0K2Oheotvckz$$-9pMYTGrB0V-WfpMQX-9x",
+    "sourcePort" : "ONVwD7YeAAtloEVSmJE1y$$NzM1j9z2kmHN7YRfEsJXa",
+    "target" : "mWnVLacYps6aU47a06q4z$$aHqpSBv5K6gRZEnz_CWdt",
+    "targetPort" : "0Zaouyhi_ZjzhnVL_x06a$$xNuVGfTCT9uvGGHnWGkad"
+  }, {
+    "id" : "jRMlph-jVj_ks0s1ZHkl1",
+    "source" : "mWnVLacYps6aU47a06q4z$$aHqpSBv5K6gRZEnz_CWdt",
+    "sourcePort" : "BG7F_twVio8V8XJ9q6ghQ$$FEI-LBUrRbUpxEfmB3Q4U",
+    "target" : "lzis-gFp2toGuwtGayi1D$$n4BMzvF-iC6GTz597R4OC",
+    "targetPort" : "AGgQ2ehcNX3c0L1YUi6qE$$UOdNg2s73CZhyXkVlUE5M"
+  } ],
+  "processes" : {
+    "M-TzbR8wtCIWN-w6tiLmZ$$7dZlAIKPNUDOw-RXkDZog" : {
+      "id" : "M-TzbR8wtCIWN-w6tiLmZ$$7dZlAIKPNUDOw-RXkDZog",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "rename",
+        "slug" : "rename",
+        "x" : 760,
+        "y" : 420,
+        "phase" : 2,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "P2OXjiPOEh6M6ubh0rBbL$$KlE4mxKRYrJIFvE-SU3xZ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "openai_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "_OCQw7qXjljNdnWcpVH7Z$$Etsn5uxX3S3J2oHwWVp3j",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "doc_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "page_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "page_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "section_num",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "section_num"
+          },
+          "description" : ""
+        }, {
+          "target" : "embedding",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "openai_embedding"
+          },
+          "description" : ""
+        }, {
+          "target" : "chunk_text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "chunk_text"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "vX95-VXbKnRywierIKHHi$$9FXZuBPQChWOmoUawZLeF##openai_embedding", "vX95-VXbKnRywierIKHHi$$9FXZuBPQChWOmoUawZLeF##chunk_text", "vX95-VXbKnRywierIKHHi$$9FXZuBPQChWOmoUawZLeF##section_num", "vX95-VXbKnRywierIKHHi$$9FXZuBPQChWOmoUawZLeF##doc_id", "vX95-VXbKnRywierIKHHi$$9FXZuBPQChWOmoUawZLeF##page_id" ]
+      }
+    },
+    "FZd-Ia9zLEIKSpCvnLP_s$$xaGz1otnUY5OWJULu6ieU" : {
+      "id" : "FZd-Ia9zLEIKSpCvnLP_s$$xaGz1otnUY5OWJULu6ieU",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "clean",
+        "slug" : "clean",
+        "x" : 640,
+        "y" : 420,
+        "phase" : 2,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-hKRI-2xtKRY1_lu-5JrM$$VrlEYXCmBLYbg67bVY95x",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "openai_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "DUphf8ESSPBZl-OPuNYae$$ZeLsKGVhVekL6YID9Rr3j",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "ncrj2uyQoZJINCBbcvG54$$JS8LbZFc2DDbjftD4mFoT##openai_error" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "openai_error is null"
+        }
+      }
+    },
+    "GxPuPkK2ruoH3NS9H7uUt$$R4Omfp2rCwMfzP7lLnidk" : {
+      "id" : "GxPuPkK2ruoH3NS9H7uUt$$R4Omfp2rCwMfzP7lLnidk",
+      "component" : "OpenAI",
+      "metadata" : {
+        "label" : "vectorize",
+        "slug" : "vectorize",
+        "x" : 520,
+        "y" : 420,
+        "phase" : 2,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5UmLecpWZyMvKz56sww7k$$256IqCvZZUeMvTWNoDWxG",
+          "slug" : "with_id",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Pp-g7d6sS0FluuDIdiloZ$$z2nyj7Jq7tBvMpVe-vP0a",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "openai_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "qa_query_column_name" : null,
+        "credential_type" : "databricks",
+        "order_by_column" : "doc_id",
+        "credential_db_scope" : "scottai-demo",
+        "credential_manual_token" : "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",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : "chunk_text",
+        "qa_context_column_name" : null,
+        "credential_db_key" : "openai_token",
+        "limit" : "10",
+        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
+        "group_data" : true
+      }
+    },
+    "lzis-gFp2toGuwtGayi1D$$n4BMzvF-iC6GTz597R4OC" : {
+      "id" : "lzis-gFp2toGuwtGayi1D$$n4BMzvF-iC6GTz597R4OC",
+      "component" : "TextProcessing",
+      "metadata" : {
+        "label" : "chunkify",
+        "slug" : "chunkify",
+        "x" : -20,
+        "y" : 420,
+        "phase" : 2,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AGgQ2ehcNX3c0L1YUi6qE$$UOdNg2s73CZhyXkVlUE5M",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "lua3mz41panJwk_nU7Q7e$$87ZWO9VseFboEuKpEvMrL",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "operation" : "text_split_into_chunks",
+        "column_name" : "section_text",
+        "split_chunk_size" : 500
+      }
+    },
+    "scnQQBLyW5R7-mX1ldaHy$$Awy3nJCIkSY26JJwt0eJB" : {
+      "id" : "scnQQBLyW5R7-mX1ldaHy$$Awy3nJCIkSY26JJwt0eJB",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "RollingWindows",
+        "slug" : "RollingWindows",
+        "x" : 100,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "O5Wr5l8FKofWjmdnqIC7t$$aOc_3ZLO5CmuPZ-8kH07M",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "JCBTAYTIZEOvEqUQMV7rB$$aMNBSUZF9C7GdLbDyhrQL",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "title",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "title"
+          },
+          "description" : ""
+        }, {
+          "target" : "page_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "page_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "section_num",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "section_num"
+          },
+          "description" : ""
+        }, {
+          "target" : "section_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "section_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "section_text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "section_text"
+          },
+          "description" : ""
+        }, {
+          "target" : "result_chunks_window",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "rolling_arr_window(result_chunks, 2)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "weYFpxgAnAyRhkSDdtbRS$$8ia_PzTlUHKRsAqRdfFad##title", "weYFpxgAnAyRhkSDdtbRS$$8ia_PzTlUHKRsAqRdfFad##section_text", "weYFpxgAnAyRhkSDdtbRS$$8ia_PzTlUHKRsAqRdfFad##section_name", "weYFpxgAnAyRhkSDdtbRS$$8ia_PzTlUHKRsAqRdfFad##page_id", "weYFpxgAnAyRhkSDdtbRS$$8ia_PzTlUHKRsAqRdfFad##section_num", "weYFpxgAnAyRhkSDdtbRS$$8ia_PzTlUHKRsAqRdfFad##result_chunks" ]
+      }
+    },
+    "sajUaeTJUtqdaMW6IYtQB$$xIevQRxUZbnPIWrcK_GtJ" : {
+      "id" : "sajUaeTJUtqdaMW6IYtQB$$xIevQRxUZbnPIWrcK_GtJ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "sw_silver_sections_1",
+        "slug" : "sw_silver_sections_1",
+        "x" : -300,
+        "y" : 360,
+        "phase" : 1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "HlpeRZw7cwak9T-2T0p72$$Kdr7LblYn0vKKpbqUt3-2",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/sw_silver_sections"
+      }
+    },
+    "EDzC1wfDZgeFIy1eDiJYA$$6eqwsoy19m3z9xm-uGXZh" : {
+      "id" : "EDzC1wfDZgeFIy1eDiJYA$$6eqwsoy19m3z9xm-uGXZh",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "sw_silver_embeddings",
+        "slug" : "sw_silver_embeddings",
+        "x" : 880,
+        "y" : 420,
+        "phase" : 2,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4ds5AxzGjuvc9vdXsJBz_$$inPOl7EHlKMAugnLR3WMj",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/sw_silver_embeddings"
+      }
+    },
+    "y4MgzBWSa7IMYTt11Eksp$$0ZS-Nd8GuNMbVXi3yRPY8" : {
+      "id" : "y4MgzBWSa7IMYTt11Eksp$$0ZS-Nd8GuNMbVXi3yRPY8",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 380,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hIS2lBVkikSeJSars-5L1$$BX5Qq5QsQ6fywnGBCOhtx",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_window",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "hiwuWViXRYhRDoRaIgSPw$$R_ZSziX6vqYzRPHBrGVBs",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "page_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "page_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "section_num",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "section_num"
+          },
+          "description" : ""
+        }, {
+          "target" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('sw:', page_id, '-', section_num, ':', chunk_window)"
+          },
+          "description" : ""
+        }, {
+          "target" : "chunk_text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('From: ', section_name, ':\\n\\n', concat_ws('\\n', text_chunks))"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "Xvafo7x6AmZm4_7L5Cj8b$$WElA0tNPgrwd_5-fgmvsu##page_id", "Xvafo7x6AmZm4_7L5Cj8b$$WElA0tNPgrwd_5-fgmvsu##section_name", "Xvafo7x6AmZm4_7L5Cj8b$$WElA0tNPgrwd_5-fgmvsu##text_chunks", "Xvafo7x6AmZm4_7L5Cj8b$$WElA0tNPgrwd_5-fgmvsu##section_num", "Xvafo7x6AmZm4_7L5Cj8b$$WElA0tNPgrwd_5-fgmvsu##chunk_window" ]
+      }
+    },
+    "iCZcUlQJtEarhkD9WZpng$$KzO414QXPI-qfeAvXg_Oz" : {
+      "id" : "iCZcUlQJtEarhkD9WZpng$$KzO414QXPI-qfeAvXg_Oz",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "SQLStatement_1",
+        "slug" : "SQLStatement_1",
+        "x" : 240,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Klv6EUgsolWCAY_l0z5o2$$hsEZHunH30Q_QJ0vHVzgj",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks_window",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "array",
+                  "elementType" : "string",
+                  "containsNull" : true
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "aWV4Q6mC_aOIuHGCMjadE$$msE3h51TjIhJJVZgxclKR",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out",
+          "id" : "wDJxcNlgHsfKV9YYcKbAP$$z5lB88BjNqbvSk9d4DL6S",
+          "language" : "sql",
+          "content" : "SELECT title, page_id, section_num, section_name, posexplode(result_chunks_window) AS (chunk_window, text_chunks) FROM in0"
+        } ],
+        "inputPortNames" : [ "in0" ]
+      }
+    },
+    "p942N7pXY0K2Oheotvckz$$-9pMYTGrB0V-WfpMQX-9x" : {
+      "id" : "p942N7pXY0K2Oheotvckz$$-9pMYTGrB0V-WfpMQX-9x",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "sw_silver_embeddings_1",
+        "slug" : "sw_silver_embeddings_1",
+        "x" : -300,
+        "y" : 500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ONVwD7YeAAtloEVSmJE1y$$NzM1j9z2kmHN7YRfEsJXa",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/sw_silver_embeddings"
+      }
+    },
+    "mWnVLacYps6aU47a06q4z$$aHqpSBv5K6gRZEnz_CWdt" : {
+      "id" : "mWnVLacYps6aU47a06q4z$$aHqpSBv5K6gRZEnz_CWdt",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : -160,
+        "y" : 420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "l6VFjNuxyiMr6AyrHy-YK$$CUmRcIekD3HZKTd540k6v",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_update",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "0Zaouyhi_ZjzhnVL_x06a$$xNuVGfTCT9uvGGHnWGkad",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "page_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "section_num",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "chunk_text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "BG7F_twVio8V8XJ9q6ghQ$$FEI-LBUrRbUpxEfmB3Q4U",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.page_id=in1.page_id"
+          },
+          "joinType" : "left_anti"
+        } ],
+        "expressions" : [ {
+          "target" : "title",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.title"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "page_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.page_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "section_num",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.section_num"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "section_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.section_name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "section_text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.section_text"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "s8L31OTS_ej3h9leXeHC2$$7fGNrQS9Qj0_gh_WQeeDf",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "s8L31OTS_ej3h9leXeHC2$$7fGNrQS9Qj0_gh_WQeeDf##page_id", "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS##page_id", "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS##section_num", "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS##section_name", "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS##section_text", "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS##page_id", "ozT0Txx4dnCZWh_StxJ1x$$cLTqgQzJIp9U4scCxD8jS##title" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

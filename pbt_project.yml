@@ -76,6 +76,102 @@ pipelines:
       - datasets/web_bronze_sitemap_raw
     subgraphs: []
     dependencies: {}
+  pipelines/starwars_ingest:
+    name: starwars_ingest
+    description: ''
+    author: scott+demo2@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-13 21:04:58'
+    datasets:
+      inputs:
+      - datasets/sw_silver_embeddings
+      - datasets/sw_silver_sections
+      outputs:
+      - datasets/sw_silver_embeddings
+    subgraphs: []
+    dependencies: {}
+  pipelines/sw_bulk_import:
+    name: sw_bulk_import
+    description: ''
+    author: scott+demo2@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-15 19:48:08'
+    datasets:
+      inputs:
+      - datasets/starwars_wiki_xml
+      outputs:
+      - datasets/sw_bronze_pagecontent
+    subgraphs: []
+    dependencies: {}
+  pipelines/sw_sectionize:
+    name: sw_sectionize
+    description: ''
+    author: scott+demo2@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-15 20:32:20'
+    datasets:
+      inputs:
+      - datasets/sw_bronze_pagecontent
+      - datasets/sw_silver_sectionized
+      outputs:
+      - datasets/sw_silver_sectionized
+    subgraphs: []
+    dependencies: {}
+  pipelines/sw_create_embeddings:
+    name: sw_create_embeddings
+    description: ''
+    author: scott+demo2@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-15 20:52:58'
+    datasets:
+      inputs:
+      - datasets/sw_silver_embeddings
+      - datasets/sw_silver_sections
+      outputs:
+      - datasets/sw_silver_embeddings
+    subgraphs: []
+    dependencies: {}
+  pipelines/sw_vectorize:
+    name: sw_vectorize
+    description: ''
+    author: scott+demo2@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-15 21:16:37'
+    datasets:
+      inputs:
+      - datasets/sw_gold_embeddings
+      - datasets/sw_silver_sectionized
+      outputs:
+      - datasets/sw_gold_embeddings
+    subgraphs: []
+    dependencies: {}
+  pipelines/sw_update_vectordb:
+    name: sw_update_vectordb
+    description: ''
+    author: scott+demo2@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-15 22:49:21'
+    datasets:
+      inputs:
+      - datasets/sw_gold_embeddings
+      - datasets/sw_gold_page_indexeddate
+      outputs:
+      - datasets/all_vectors_silver
+      - datasets/sw_gold_page_indexeddate
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/web_bronze_sitemap_raw:
     name: web_bronze_sitemap_raw
@@ -155,6 +251,19 @@ datasets:
         description: ''
         author: maciej@prophecy.io
         createdAt: '2023-06-13 05:18:30'
+  datasets/web_bronze_url:
+    name: web_bronze_url
+    description: ''
+    author: maciej@prophecy.io
+    createdAt: '2023-06-24 20:23:30'
+    mode: batch
+    physicalDatasets:
+      db_product:
+        fabricId: 1777
+        datasetType: WebApp
+        description: ''
+        author: maciej@prophecy.io
+        createdAt: '2023-06-24 20:23:30'
   datasets/slack_chat:
     name: slack_chat
     description: ''
@@ -181,21 +290,123 @@ datasets:
         description: ''
         author: maciej@prophecy.io
         createdAt: '2023-06-20 04:50:58'
-  datasets/web_bronze_url:
-    name: web_bronze_url
+  datasets/starwars_wiki_xml:
+    name: starwars_wiki_xml
     description: ''
-    author: maciej@prophecy.io
-    createdAt: '2023-06-24 20:23:30'
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-13 21:12:01'
     mode: batch
     physicalDatasets:
-      db_product:
-        fabricId: 1777
-        datasetType: WebApp
+      HelloDev:
+        fabricId: 1571
+        datasetType: File
         description: ''
-        author: maciej@prophecy.io
-        createdAt: '2023-06-24 20:23:30'
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-13 21:12:01'
+  datasets/sw_bronze_pagecontent:
+    name: sw_bronze_pagecontent
+    description: ''
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-13 21:14:11'
+    mode: batch
+    physicalDatasets:
+      HelloDev:
+        fabricId: 1571
+        datasetType: Database
+        description: ''
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-13 21:14:11'
+  datasets/sw_silver_sections:
+    name: sw_silver_sections
+    description: ''
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-14 00:34:51'
+    mode: batch
+    physicalDatasets:
+      HelloDev:
+        fabricId: 1571
+        datasetType: Database
+        description: ''
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-14 00:34:51'
+  datasets/sw_silver_embeddings:
+    name: sw_silver_embeddings
+    description: ''
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-14 19:25:55'
+    mode: batch
+    physicalDatasets:
+      HelloDev:
+        fabricId: 1571
+        datasetType: Database
+        description: ''
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-14 19:25:55'
+  datasets/sw_silver_sectionized:
+    name: sw_silver_sectionized
+    description: ''
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-15 21:32:52'
+    mode: batch
+    physicalDatasets:
+      HelloDev:
+        fabricId: 1571
+        datasetType: Database
+        description: ''
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-15 21:32:52'
+  datasets/sw_gold_embeddings:
+    name: sw_gold_embeddings
+    description: ''
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-15 21:37:37'
+    mode: batch
+    physicalDatasets:
+      HelloDev:
+        fabricId: 1571
+        datasetType: Database
+        description: ''
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-15 21:37:37'
+  datasets/sw_gold_page_indexeddate:
+    name: sw_gold_page_indexeddate
+    description: ''
+    author: scott+demo2@prophecy.io
+    createdAt: '2023-07-15 22:03:06'
+    mode: batch
+    physicalDatasets:
+      HelloDev:
+        fabricId: 1571
+        datasetType: Database
+        description: ''
+        author: scott+demo2@prophecy.io
+        createdAt: '2023-07-15 22:03:06'
 templates: {}
-jobs: {}
+jobs:
+  jobs/SyncVectorDB:
+    name: SyncVectorDB
+    description: ''
+    fabricUID: 1571
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0/10 * * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/sw_update_vectordb
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2023-07-17 06:37:39'
+    author: scott+demo2@prophecy.io
 functions:
   author: null
   createdAt: '2023-06-13 00:50:07'
@@ -207,7 +418,23 @@ functions:
       tags: []
       inputs: []
       outputs: []
-      author: maciej@prophecy.io
+      author: scott+demo2@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+    udfs/parse_subsections:
+      name: parse_subsections
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: scott+demo2@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+    udfs/rolling_arr_window:
+      name: rolling_arr_window
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: scott+demo2@prophecy.io
       createdAt: '2022-12-15 18:04:50'
   udafs: {}
   expressions: {}
@@ -230,5 +457,15 @@ dependencies:
   enabled: false
   id: xs0D8
   exclusions: []
+- type: pypi
+  id: tO097
+  name: mwparserfromhell
+  enabled: false
+  package: mwparserfromhell==0.6.4
+- type: pypi
+  id: 80Z7r
+  name: wikitextparser
+  enabled: false
+  package: wikitextparser==0.53.0
 projectDependencies: {}
 pipelineConfigurations: {}
