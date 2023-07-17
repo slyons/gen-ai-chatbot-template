@@ -7,4 +7,14 @@ from sw_update_vectordb.config.ConfigStore import *
 from sw_update_vectordb.udfs.UDFs import *
 
 def sw_gold_page_indexeddate(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("overwrite").saveAsTable(f"scottaidemo.sw_gold_page_indexeddate")
+    if spark.catalog._jcatalog.tableExists(f"scottaidemo.sw_gold_page_indexeddate"):
+        from delta.tables import DeltaTable, DeltaMergeBuilder
+        DeltaTable\
+            .forName(spark, f"scottaidemo.sw_gold_page_indexeddate")\
+            .alias("target")\
+            .merge(in0.alias("source"), (col("source.doc_id") == col("target.doc_id")))\
+            .whenMatchedUpdateAll()\
+            .whenNotMatchedInsertAll()\
+            .execute()
+    else:
+        in0.write.format("delta").mode("overwrite").saveAsTable(f"scottaidemo.sw_gold_page_indexeddate")
